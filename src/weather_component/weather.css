@@ -81,10 +81,17 @@
 
 @media screen and (min-width: 700px) {
 	.weather__inner {
-		max-width: 1000px;
-		margin-top: -10%;
+		margin-top: -60%;
 	}
 }
+
+@media screen and (min-width: 1000px) {
+	.weather__inner {
+		margin-top: -20%;
+	}
+}
+
+//
 
 .weather-icon {
 	font-size: 4rem;

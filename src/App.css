@@ -9,10 +9,6 @@
 	background-attachment: fixed;
 }
 
-.app.warm {
-	background-image: url(./assets/brown-trees-path.jpg);
-}
-
 .app__logo {
 	font-size: 30px;
 }

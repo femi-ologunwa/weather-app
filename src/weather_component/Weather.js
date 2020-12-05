@@ -10,9 +10,9 @@ function Weather() {
 	const [place, setPlace] = useState({ city: '', country: '' });
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
-	const [errMsg, setErrMsg] = useState({ title: '', content: '' });
 	const [render, setRender] = useState(false);
 	const [display, setDisplay] = useState(false);
+	const [errMsg, setErrMsg] = useState({ title: '', content: '' });
 	const [weatherData, setWeatherData] = useState({
 		city: null,
 		countryCode: null,
@@ -88,6 +88,7 @@ function Weather() {
 			const response = await fetchWithTimeout(url, { timeout: 6000 });
 			const weather = await response.json();
 			const countryDetails = getCountryCode(options, place.country);
+			console.log(weather);
 
 			//get weather icon and background class
 			const weatherIcon = abc.getWeatherIconAndBgclass(
@@ -149,6 +150,8 @@ function Weather() {
 				setError(true);
 			}
 		} catch (error) {
+			setLoading(false);
+			setRender(false);
 			if (error.name === 'TypeError') {
 				const fetchErrorMsg = {
 					title: 'Error!',
@@ -198,6 +201,7 @@ function Weather() {
 		setError(false);
 		setErrMsg({ title: '', content: '' });
 		setLoading(false);
+		setRender(false);
 		setWeatherData({
 			city: null,
 			countryCode: null,
