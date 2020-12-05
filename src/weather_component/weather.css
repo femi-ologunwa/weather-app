@@ -1,0 +1,180 @@
+.weather__container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	width: 100%;
+	max-width: 2000px !important;
+	text-align: center;
+	color: #fff;
+	background-image: url(../assets/default.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	position: relative;
+	transition: 0.4 ease-out;
+}
+
+.logo {
+	text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.thunderstorm {
+	background-image: url(../assets/thunderstorm.jpg);
+}
+
+.drizzle {
+	background-image: url(../assets/drizzle.jpg);
+}
+
+.rain {
+	background-image: url(../assets/rain.jpg);
+}
+
+.snow {
+	background-image: url(../assets/snow.jpg);
+}
+
+.fog {
+	background-image: url(../assets/fog.jpg);
+}
+
+.clear {
+	background-image: url(../assets/clear.jpg);
+}
+
+.cloudy {
+	background-image: url(../assets/cloudy.jpg);
+}
+
+.default {
+	background-image: url(../assets/cloudy.jpg);
+}
+
+.weather__content {
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0.4)
+	);
+	min-height: 100vh;
+	padding: 15px;
+	padding-top: 20px;
+	padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 700px) {
+	.weather__content {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.weather__inner {
+	max-width: 1000px;
+}
+
+@media screen and (min-width: 700px) {
+	.weather__inner {
+		max-width: 1000px;
+		margin-top: -10%;
+	}
+}
+
+.weather-icon {
+	font-size: 4rem;
+	padding: 2rem 0;
+}
+
+.form-grid {
+	width: 100%;
+	display: grid;
+	grid-gap: 1rem;
+	padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+	.form-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.form-grid input {
+	border-width: 0 0 2px 0;
+	border-color: #fff;
+	outline: none;
+	color: #fff;
+	border-radius: 0;
+	transition: border-color 0.2s;
+	width: 100%;
+	padding: 5px 10px;
+	background-color: rgba(255, 255, 255, 0.25);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.form-grid input:focus {
+	border-color: #fff;
+	background-color: rgba(255, 255, 255, 0.25);
+	box-shadow: none !important;
+}
+
+.form-grid input::placeholder {
+	color: whitesmoke;
+}
+
+.btn {
+	border-radius: 0 !important;
+	background-color: #4a89cd !important;
+	border: 1px solid #4a89cd !important;
+	outline: 0 !important;
+	color: #fff !important;
+}
+
+.btn:focus {
+	box-shadow: none !important;
+}
+
+.formCountry {
+	position: relative;
+}
+
+.countryList {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.95);
+	color: #444;
+	width: 100%;
+	max-height: 15rem;
+	overflow-y: scroll;
+}
+
+.countryList > div {
+	padding: 10px;
+	font-size: 1rem;
+	cursor: pointer;
+	border-top: 1px dotted #c9c9c9;
+}
+
+.countryList > div:hover {
+	background-color: #444;
+	color: #fff;
+}
+
+footer {
+	width: 100%;
+	background-color: #444;
+	position: fixed;
+	bottom: 0;
+}
+
+footer p {
+	font-size: 12px;
+	padding: 10px;
+	margin-bottom: 0 !important;
+	color: #bbb;
+}
