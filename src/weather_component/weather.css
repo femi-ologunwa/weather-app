@@ -2,7 +2,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	min-height: 100%;
+	min-height: 95vh;
 	width: 100%;
 	max-width: 2000px !important;
 	text-align: center;
@@ -11,11 +11,9 @@
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	position: relative;
-	transition: 0.4 ease-out;
+	overflow: hidden;
 }
 
 .logo {
@@ -47,11 +45,15 @@
 }
 
 .cloudy {
-	background-image: url(../assets/cloudy.jpg);
+	background-image: url(../assets/cloud.jpg);
+}
+
+.sunny {
+	background-image: url(../assets/sunny.jpg);
 }
 
 .default {
-	background-image: url(../assets/cloudy.jpg);
+	background-image: url(../assets/default.jpg);
 }
 
 .weather__content {
@@ -64,6 +66,12 @@
 	padding: 15px;
 	padding-top: 20px;
 	padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 550px) {
+	.weather__content {
+		padding-top: 3.5rem;
+	}
 }
 
 @media screen and (min-width: 700px) {
@@ -81,17 +89,10 @@
 
 @media screen and (min-width: 700px) {
 	.weather__inner {
-		margin-top: -60%;
+		max-width: 1000px;
+		margin-top: -10%;
 	}
 }
-
-@media screen and (min-width: 1000px) {
-	.weather__inner {
-		margin-top: -20%;
-	}
-}
-
-//
 
 .weather-icon {
 	font-size: 4rem;
@@ -122,7 +123,7 @@
 	padding: 5px 10px;
 	background-color: rgba(255, 255, 255, 0.25);
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 500 !important;
 }
 
 .form-grid input:focus {
@@ -136,6 +137,7 @@
 }
 
 .btn {
+	font-weight: 500 !important;
 	border-radius: 0 !important;
 	background-color: #4a89cd !important;
 	border: 1px solid #4a89cd !important;
@@ -161,6 +163,7 @@
 }
 
 .countryList > div {
+	font-weight: 500 !important;
 	padding: 10px;
 	font-size: 1rem;
 	cursor: pointer;
@@ -175,7 +178,7 @@
 footer {
 	width: 100%;
 	background-color: #444;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 }
 

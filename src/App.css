@@ -1,24 +1,3 @@
 .app {
-	width: 100%;
-	text-align: center;
-	color: #fff;
-	background-image: url(./assets/sea.jpg);
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-
-.app__logo {
-	font-size: 30px;
-}
-
-main {
-	background-image: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0.4),
-		rgba(0, 0, 0, 0.4)
-	);
-	min-height: 100vh;
-	padding: 15px 10px;
+	position: relative;
 }

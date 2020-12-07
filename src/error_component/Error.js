@@ -3,7 +3,7 @@ import { BsX } from 'react-icons/bs';
 import './error.css';
 
 const Error = ({ errMsg, closeModal }) => {
-	const { title, content } = errMsg;
+	let { title, content } = errMsg;
 	return (
 		<div className='error'>
 			<div className='modal__overlay'>

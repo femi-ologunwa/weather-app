@@ -10,9 +10,9 @@ function Weather() {
 	const [place, setPlace] = useState({ city: '', country: '' });
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
+	const [errMsg, setErrMsg] = useState({ title: '', content: '' });
 	const [render, setRender] = useState(false);
 	const [display, setDisplay] = useState(false);
-	const [errMsg, setErrMsg] = useState({ title: '', content: '' });
 	const [weatherData, setWeatherData] = useState({
 		city: null,
 		countryCode: null,
@@ -80,8 +80,7 @@ function Weather() {
 
 	//Function to fetch weather info from API (Timed Function)
 	const fetchWeather = async (city, country) => {
-		const apiKey = 'b7078507ea208792f29878091c44f4f3';
-		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}`;
+		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${OPEN_WEATHER_MAP_API_KEY}`;
 
 		setLoading(true);
 		try {
@@ -89,6 +88,7 @@ function Weather() {
 			const weather = await response.json();
 			const countryDetails = getCountryCode(options, place.country);
 			console.log(weather);
+			console.log(countryDetails.code);
 
 			//get weather icon and background class
 			const weatherIcon = abc.getWeatherIconAndBgclass(
@@ -193,6 +193,7 @@ function Weather() {
 
 			setErrMsg({ title: error.title, content: error.content });
 			setError(true);
+			setPlace({ city: '', country: '' });
 		}
 	}
 
@@ -201,7 +202,6 @@ function Weather() {
 		setError(false);
 		setErrMsg({ title: '', content: '' });
 		setLoading(false);
-		setRender(false);
 		setWeatherData({
 			city: null,
 			countryCode: null,
