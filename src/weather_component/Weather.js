@@ -80,7 +80,8 @@ function Weather() {
 
 	//Function to fetch weather info from API (Timed Function)
 	const fetchWeather = async (city, country) => {
-		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${OPEN_WEATHER_MAP_API_KEY}`;
+		const apiKey = 'b7078507ea208792f29878091c44f4f3';
+		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}`;
 
 		setLoading(true);
 		try {
