@@ -11,7 +11,7 @@ function Weather() {
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
 	const [errMsg, setErrMsg] = useState({ title: '', content: '' });
-	const [render, setRender] = useState(true);
+	const [render, setRender] = useState(false);
 	const [display, setDisplay] = useState(false);
 	const [weatherData, setWeatherData] = useState({
 		city: null,
