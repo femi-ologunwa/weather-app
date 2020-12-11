@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import WeatherRender from '../weatherDetailsRender/WeatherDetailsRender';
 import Loading from '../loading_component/Loading';
-import { abc, checkCharType, getCountryCode } from '../functions';
+import { abc, checkCharType, getCountryCode } from '../../utils/functions';
 import Error from '../error_component/Error';
-import countryList from '../countries';
+import countryList from '../../utils/countries';
 import './weather.css';
 
 function Weather() {
@@ -11,7 +11,7 @@ function Weather() {
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
 	const [errMsg, setErrMsg] = useState({ title: '', content: '' });
-	const [render, setRender] = useState(false);
+	const [render, setRender] = useState(true);
 	const [display, setDisplay] = useState(false);
 	const [weatherData, setWeatherData] = useState({
 		city: null,
@@ -88,8 +88,8 @@ function Weather() {
 			const response = await fetchWithTimeout(url, { timeout: 6000 });
 			const weather = await response.json();
 			const countryDetails = getCountryCode(options, place.country);
-			console.log(weather);
-			console.log(countryDetails.code);
+			//console.log(weather);
+			//console.log(countryDetails.code);
 
 			//get weather icon and background class
 			const weatherIcon = abc.getWeatherIconAndBgclass(

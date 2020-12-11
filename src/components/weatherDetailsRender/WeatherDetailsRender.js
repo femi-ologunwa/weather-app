@@ -1,5 +1,5 @@
 import React from 'react';
-import kelvinToCelsius, { dayString } from '../functions';
+import kelvinToCelsius, { dayString } from '../../utils/functions';
 import './weatherDetailsRender.css';
 
 function WeatherRender({ weatherData }) {
@@ -15,8 +15,9 @@ function WeatherRender({ weatherData }) {
 				)}
 				{!sameName && <h4>{weatherData.countryName}</h4>}
 
+				<h5 className='weatherDetails__today'>{dayString(new Date())}</h5>
 				<h5 className='weatherDetails__today'>
-					{dayString(new Date())}, {new Date().toLocaleTimeString()}
+					{new Date().toLocaleTimeString()}
 				</h5>
 				<h5 className='py4'>
 					{

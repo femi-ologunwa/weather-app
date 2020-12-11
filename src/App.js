@@ -1,5 +1,5 @@
 import React from 'react';
-import Weather from './weather_component/Weather';
+import Weather from './components/weather_component/Weather';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'weather-icons/css/weather-icons.css';
 

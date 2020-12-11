@@ -7,7 +7,7 @@
 	max-width: 2000px !important;
 	text-align: center;
 	color: #fff;
-	background-image: url(../assets/default.jpg);
+	background-image: url(../../assets/default.jpg);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -21,46 +21,46 @@
 }
 
 .thunderstorm {
-	background-image: url(../assets/thunderstorm.jpg);
+	background-image: url(../../assets/thunderstorm.jpg);
 }
 
 .drizzle {
-	background-image: url(../assets/drizzle.jpg);
+	background-image: url(../../assets/drizzle.jpg);
 }
 
 .rain {
-	background-image: url(../assets/rain.jpg);
+	background-image: url(../../assets/rain.jpg);
 }
 
 .snow {
-	background-image: url(../assets/snow.jpg);
+	background-image: url(../../assets/snow.jpg);
 }
 
 .fog {
-	background-image: url(../assets/fog.jpg);
+	background-image: url(../../assets/fog.jpg);
 }
 
 .clear {
-	background-image: url(../assets/clear.jpg);
+	background-image: url(../../assets/clear.jpg);
 }
 
 .cloudy {
-	background-image: url(../assets/cloud.jpg);
+	background-image: url(../../assets/cloud.jpg);
 }
 
 .sunny {
-	background-image: url(../assets/sunny.jpg);
+	background-image: url(../../assets/sunny.jpg);
 }
 
 .default {
-	background-image: url(../assets/default.jpg);
+	background-image: url(../../assets/default.jpg);
 }
 
 .weather__content {
 	background-image: linear-gradient(
 		to bottom,
-		rgba(0, 0, 0, 0.4),
-		rgba(0, 0, 0, 0.4)
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
 	);
 	min-height: 100vh;
 	padding: 15px;
@@ -177,7 +177,7 @@
 
 footer {
 	width: 100%;
-	background-color: #444;
+	background-color: #222;
 	position: absolute;
 	bottom: 0;
 }
@@ -186,5 +186,5 @@ footer p {
 	font-size: 12px;
 	padding: 10px;
 	margin-bottom: 0 !important;
-	color: #bbb;
+	color: #5c5c5c !important;
 }
